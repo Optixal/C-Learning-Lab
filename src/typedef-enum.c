@@ -6,10 +6,11 @@ typedef enum {
 
 void main() {
     BOOLEAN b_var;
-    b_var = true;
+    b_var = false;
+
     if (b_var == true) {
-        printf("TRUE\n");
+        printf("True!\n");
     } else {
-        printf("FALSE\n");
+        printf("False!\n");
     }
 }
