@@ -1,1 +1,1 @@
-# C Labs
+# C Learning Lab
