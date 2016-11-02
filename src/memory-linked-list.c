@@ -34,6 +34,17 @@ void create_list(node_t *head, int length) {
     printf("Linked list of size %d successfully created!\n\n", length);
 }
 
+void freelist(node_t *head) {
+    printf("Freeing memory...\n");
+    node_t *nxt_ptr;
+    while (head != NULL) {
+        nxt_ptr = head->next;
+        free(head);
+        head = nxt_ptr;
+    }
+    printf("Allocated memory for list freed.\n");
+}
+
 void print_list(node_t *head) {
     node_t *current = head;
     
@@ -120,4 +131,6 @@ int main() {
     printf("Removing index %d...\n", index_to_rm);
     remove_index(&list, index_to_rm);
     print_list(list);
+    
+    freelist(list);
 }
